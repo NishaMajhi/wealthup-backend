@@ -14,6 +14,10 @@ app.use(express.json())
 
 app.use("/api/codes/", codeRouter)
 
+app.get("/", (req, res) => {
+    res.send("hello, wealth up here")
+})
+
 app.use(errorHanlder)
 
 connectDB()
